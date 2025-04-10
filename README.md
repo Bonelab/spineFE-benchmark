@@ -37,7 +37,7 @@ Contains CSV metadata describing the full VERSE cohort, including target vertebr
 ### nii_files/
 This folder contains example `.nii.gz` files, including:
 
-- Calibrated and resampled CT images
+- Calibrated and resampled CT images cropped for each (unfractured) vertebra label (e.g. _vertebra_20 = L1, see Verse19 labelling for more information)
 - Cropped and relabeled segmentation masks
 
 The full dataset of cropped NIfTI files must be downloaded from OSF [insert link] and processed accordingly.
