@@ -1,23 +1,116 @@
-# spineFE-benchmark
-Code and instructions to reproduce the analyses from our study comparing linear and nonlinear finite element models of vertebral strength across the thoracic and lumbar spine using the VERSE19 dataset. Includes image data, results and visualization scripts to support full reproducibility.
+# Spine Finite Element Benchmarking – README
 
-## 📌 Acknowledgment – VERSE19 Dataset
+This repository provides the code, data structure, and usage instructions for benchmarking linear and nonlinear finite element (FE) models of vertebral strength using calibrated CT scans derived from the VERSE dataset.
 
-This project uses data from the **VERTEBRAE SEGMENTATION (VerSe)** dataset, which is licensed under the [Creative Commons Attribution 4.0 International License (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/).
+## Directory Structure
 
-If you use VerSe, the authors kindly request that you cite the following publications:
+```
+.
+├── data/
+│   ├── calibration_files/        # Calibration text files for converting HU to density (full set needs to be downloaded from OSF)
+│   ├── meta_data/                # CSV files with individual info (must be downloaded separately)
+│   └── nii_files/                # CT and mask files in NIfTI format (full set needs to be downloaded from OSF)
+├── notebooks/                    # Jupyter notebooks for processing and analysis
+├── results/                      # Output figures, tables, and tabulated values
+├── CITATION.cff                  # Please cite this project AND related projects below if using this data
+├── environment.yml               # Conda environment definition
+├── LICENSE                       # License for using this data
+└── README.md
+```
 
-- Sekuboyina A, Rempfler M, Valentinitsch A, et al.  
-  **VerSe: A Vertebrae Labelling and Segmentation Benchmark for Multi-detector CT Images**.  
-  *Medical Image Analysis*, 2021.  
-  [https://doi.org/10.1016/j.media.2021.102166](https://doi.org/10.1016/j.media.2021.102166)  
-  Preprint: [arXiv:2001.09193](https://arxiv.org/abs/2001.09193)
+## Data Folder Details
 
-- Löffler M, Sekuboyina A, Jacob A, et al.  
-  **A Vertebral Segmentation Dataset with Fracture Grading**.  
-  *Radiology: Artificial Intelligence*, 2020.  
-  [https://doi.org/10.1148/ryai.2020190138](https://doi.org/10.1148/ryai.2020190138)
+### calibration_files/
+Contains `.txt` files used to calibrate CT Hounsfield units (HU) to density. These are necessary for generating material properties in finite element models.
+The full dataset must be downloaded OSF [insert link].
 
-- Liebl H, Schinz D, Sekuboyina A, et al.  
-  **A Computed Tomography Vertebral Segmentation Dataset with Anatomical Variations and Multi-Vendor Scanner Data**, 2021.  
-  Preprint: [arXiv:2103.06360](https://arxiv.org/pdf/2103.06360.pdf)
+### meta_data/
+Contains CSV metadata describing the full VERSE cohort, including target vertebra, fracture status, and scan identifiers. You must manually download these CSV files from the original publication appendix:
+
+- Löffler et al. Radiology: Artificial Intelligence, 2020  
+  https://doi.org/10.1148/ryai.2020190138
+
+### nii_files/
+This folder contains example `.nii.gz` files, including:
+
+- Calibrated and resampled CT images
+- Cropped and relabeled segmentation masks
+
+The full dataset of cropped NIfTI files must be downloaded from OSF [insert link] and processed accordingly.
+
+## Getting Started
+
+To run the notebooks and replicate the results:
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/Bonelab/spineFE-benchmark.git
+cd spineFE-benchmark
+```
+
+2. Create and activate the environment:
+
+```bash
+conda env create -f environment.yml
+conda activate spineFE
+```
+
+3. Install the required package:
+
+```bash
+pip install git+https://github.com/Bonelab/Ogo.git
+```
+
+## Notebooks Overview
+
+### 1. Finite Element Model Generation and Solving
+Shows how to segment vertebrae, apply density calibration, convert images to material IDs, and generate linear and nonlinear micro-FE models.
+
+### 2. Internal Density Calibration
+Reprocesses the full VERSE images to apply internal density calibration on the original clinical scans. This is necessary if other structures in the image are of interest (e.g. muscle density) since the example images are cropped to the bone and pre-aligned. Download the original Verse 2019 data here: https://osf.io/nqjyw/
+
+### 3. Reproduce Manuscript Figures and Tables
+Recreates all visualizations, tables, and statistical results reported in the accompanying manuscript.
+
+## Results Folder
+
+The `results/` folder contains:
+
+- Figures and tables used in the manuscript
+- Tabulated strength and density values at the target vertebra for each subject
+- Linear FEA-derived stiffness values at all non-fractured vertebrae
+
+## License and Data Source
+
+### License
+The data are distributed under the Creative Commons Attribution-ShareAlike 2.0 License (CC BY-SA 2.0):
+
+https://creativecommons.org/licenses/by-sa/2.0/
+
+By using or redistributing these files, you agree to the terms of this license, including appropriate attribution and share-alike conditions.
+
+### Source
+The original data come from the VERTEBRAE SEGMENTATION (VerSe) challenge:
+
+- Löffler M, Sekuboyina A, Jakob A, et al.  
+  A Vertebral Segmentation Dataset with Fracture Grading. Radiology: Artificial Intelligence, 2020.  
+  https://doi.org/10.1148/ryai.2020190138
+
+- Sekuboyina A. et al.  
+  Labelling Vertebrae with 2D Reformations of Multidetector CT Images: An Adversarial Approach for Incorporating Prior Knowledge of Spine Anatomy. Radiology: AI, 2020.  
+  https://doi.org/10.1148/ryai.2020190074
+
+- Sekuboyina A, Bayat AH, et al.  
+  VerSe: A Vertebrae Labelling and Segmentation Benchmark.  
+  https://arxiv.org/abs/2001.09193
+
+### Modifications
+The `.nii.gz` files in this repository were modified for finite element analysis purposes. Changes include:
+
+- Resampling to isotropic resolution
+- Calibration to density using internal density calibration
+- Cropping and re-alignment for FE analysis
+- Relabeling of segmentation masks for cortical, trabecular, vertebral body and process and disk components
+
+These modifications facilitate efficient and consistent FE modeling across the spine.

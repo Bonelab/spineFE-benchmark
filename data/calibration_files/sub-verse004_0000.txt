@@ -1,0 +1,46 @@
+Internal calibration:
+  --------------------------- --------
+                          ID: sub-verse004_0000.nii.gz
+               python script: ogoImageCalibration
+                     version: 1.00
+               creation date: 2025-04-08
+
+Files:
+  --------------------------- --------
+                 input image: /home/matthias.walle/data/scratch/matthias/data/NONLINFEA/VERSE19/IMAGES/sub-verse004_0000.nii.gz
+                  input mask: /home/matthias.walle/data/scratch/matthias/data/NONLINFEA/VERSE19/SEGMENTATION/sub-verse004_0000/sub-verse004_0000_caliblim.nii.gz
+                output image: /home/matthias.walle/data/scratch/matthias/data/NONLINFEA/VERSE19/CALIBIMLIM/sub-verse004_0000.nii.gz
+       calibration file name: /home/matthias.walle/data/scratch/matthias/data/NONLINFEA/VERSE19/CALIBIMLIM/sub-verse004_0000.txt
+
+Calibration parameters:
+  --------------------------- --------
+                         Fit: True
+                Energy [keV]:  97.000000
+                     Max R^2:   0.998965
+  --------------------------- --------
+                Density [HU]:     Mean   StdDev  #Voxels
+                     Adipose   -82.579   60.850       63 [used]
+                         Air  -956.834   21.128     2569 [used]
+                       Blood    39.249   61.562     8200 [used]
+               Cortical Bone  1226.214  133.869     3624 [used]
+             Skeletal Muscle    24.561   71.951    77206 [used]
+  --------------------------- --------
+    Mass Attenuation [cm2/g]:
+                     Adipose     0.170
+                         Air     0.156
+                       Blood     0.171
+               Cortical Bone     0.191
+             Skeletal Muscle     0.171
+
+                      K2HPO4     0.205
+                         CHA     0.210
+                Triglyceride     0.170
+                       Water     0.173
+
+                       Water     0.173
+                 HU-u/p Slope     0.000016
+           HU-u/p Y-Intercept     0.171240
+    HU-Material Density Slope     0.000893
+  HU-Material Density Y-Intercept     0.968731
+  --------------------------- --------
+

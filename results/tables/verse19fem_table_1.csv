@@ -1,0 +1,24 @@
+,Section,Variable,Overall,Male,Female,p-value
+0,Demographics,,,,,
+1,,Number of Subjects,141,49,92,
+2,,Age (years),66.1 ± 15.0,59.8 ± 16.6,69.4 ± 12.9,0.000
+3,Bone Densitometry,,,,,
+4,,DXA T-score,-1.5 ± 1.8,-1.5 ± 1.8,-1.5 ± 1.8,0.962
+5,,vBMD (Löffler 2020) [mg/cc],77.8 ± 53.6,104.9 ± 59.5,63.4 ± 44.1,0.000
+6,,Received DXA,107 (75.9%),31 (63.3%),76 (82.6%),0.019
+7,Mechanical Variables,,,,,
+8,,F.Load (nonlinear) [kN],3.4 ± 1.6,4.0 ± 1.9,3.1 ± 1.4,0.004
+9,,"R.Force (0.2%, linear) [kN]",3.6 ± 1.1,3.8 ± 1.2,3.4 ± 1.0,0.021
+10,,Number of Vertebrae Assessed,10.0 ± 5.0,9.7 ± 4.8,10.2 ± 5.1,0.541
+11,,Any Vertebral Fracture,80 (56.7%),19 (38.8%),61 (66.3%),0.003
+12,,Foreign Material Present,13 (9.2%),5 (10.2%),8 (8.7%),0.991
+13,Contrast Enhancement,,,,,0.345
+14,,Contrast: ce-no,118 (83.7%),43 (87.8%),75 (81.5%),
+15,,Contrast: ce-art,4 (2.8%),2 (4.1%),2 (2.2%),
+16,,Contrast: ce-pv,19 (13.5%),4 (8.2%),15 (16.3%),
+17,CT Device,,,,,0.107
+18,,CT Device: Philips Brilliance 64,52 (36.9%),11 (22.4%),41 (44.6%),
+19,,CT Device: Philips IQon,28 (19.9%),11 (22.4%),17 (18.5%),
+20,,CT Device: Philips iCT,26 (18.4%),10 (20.4%),16 (17.4%),
+21,,CT Device: Siemens Somatom Definition AS,4 (2.8%),2 (4.1%),2 (2.2%),
+22,,CT Device: Siemens Somatom Definition AS+,31 (22.0%),15 (30.6%),16 (17.4%),
