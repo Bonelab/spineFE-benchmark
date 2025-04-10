@@ -1,6 +1,10 @@
 # Spine Finite Element Benchmarking – README
 
-This repository provides the code, data structure, and usage instructions for benchmarking linear and nonlinear finite element (FE) models of vertebral strength using calibrated CT scans derived from the VERSE dataset.
+This repository provides the code, data structure, and usage instructions for benchmarking linear and nonlinear finite element (FE) models of vertebral strength using calibrated CT scans derived from the VERSE dataset. More details are described in the publication:
+
+- Walle M., Matheson B.E., S.K. Boyd 
+  Comparing Linear and Nonlinear Finite Element Models of Vertebral Strength Across the Thoracic and Lumbar Spine: A Benchmark from Calibrated CT Scans. Bone 2024 (in submission)
+  [Maybe upload to bioRxiv?]
 
 ## Directory Structure
 
