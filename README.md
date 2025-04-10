@@ -6,8 +6,9 @@ This repository provides the code, data structure, and usage instructions for be
   Comparing Linear and Nonlinear Finite Element Models of Vertebral Strength Across the Thoracic and Lumbar Spine: A Benchmark from Calibrated CT Scans. Bone 2024 (in submission)
   [Maybe upload to bioRxiv?]
 
-![image](https://github.com/user-attachments/assets/56c0a6b8-8c24-4669-a49c-02710273cbf0)
-Figure: The dataset includes additional segmenations for vertebral body/process, trabecular/cortical bone and artificial intervertebral disks. 
+![image](https://github.com/user-attachments/assets/f5cd7f43-8fca-4de5-a546-96120506f327)
+
+Figure 1: Study Overview
 
 ## Directory Structure
 
@@ -87,6 +88,12 @@ The `results/` folder contains:
 - Figures and tables used in the manuscript
 - Tabulated strength and density values at the target vertebra for each subject
 - Linear FEA-derived stiffness values at all non-fractured vertebrae
+
+## Visual Data Overview
+
+![image](https://github.com/user-attachments/assets/56c0a6b8-8c24-4669-a49c-02710273cbf0)
+
+Figure 2: The dataset includes additional segmenations for vertebral body/process, trabecular/cortical bone and artificial intervertebral disks. 
 
 ## License and Data Source
 
