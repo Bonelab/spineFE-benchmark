@@ -6,7 +6,8 @@ This repository provides the code, data structure, and usage instructions for be
   Comparing Linear and Nonlinear Finite Element Models of Vertebral Strength Across the Thoracic and Lumbar Spine: A Benchmark from Calibrated CT Scans. Bone 2024 (in submission)
   [Maybe upload to bioRxiv?]
 
-![image](https://github.com/user-attachments/assets/f5cd7f43-8fca-4de5-a546-96120506f327)
+![Figure_1](https://github.com/user-attachments/assets/eab08145-fa6c-4609-acb3-a35c8543dccb)
+
 
 Figure 1: Study Overview
 
