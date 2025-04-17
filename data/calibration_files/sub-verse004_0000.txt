@@ -7,10 +7,10 @@ Internal calibration:
 
 Files:
   --------------------------- --------
-                 input image: /home/matthias.walle/data/scratch/matthias/data/NONLINFEA/VERSE19/IMAGES/sub-verse004_0000.nii.gz
-                  input mask: /home/matthias.walle/data/scratch/matthias/data/NONLINFEA/VERSE19/SEGMENTATION/sub-verse004_0000/sub-verse004_0000_caliblim.nii.gz
-                output image: /home/matthias.walle/data/scratch/matthias/data/NONLINFEA/VERSE19/CALIBIMLIM/sub-verse004_0000.nii.gz
-       calibration file name: /home/matthias.walle/data/scratch/matthias/data/NONLINFEA/VERSE19/CALIBIMLIM/sub-verse004_0000.txt
+                 input image: sub-verse004_0000.nii.gz
+                  input mask: 
+                output image: 
+       calibration file name: sub-verse004_0000.txt
 
 Calibration parameters:
   --------------------------- --------

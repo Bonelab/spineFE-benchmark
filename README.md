@@ -1,6 +1,14 @@
 # Spine Finite Element Benchmarking – README
 
-This repository provides the code, data structure, and usage instructions for benchmarking linear and nonlinear finite element (FE) models of vertebral strength using calibrated CT scans derived from the VERSE dataset.
+This repository provides the code, data structure, and usage instructions for benchmarking linear and nonlinear finite element (FE) models of vertebral strength using calibrated CT scans derived from the VERSE dataset. More details are described in the publication:
+
+- Walle M., Matheson B.E., S.K. Boyd 
+  Comparing Linear and Nonlinear Finite Element Models of Vertebral Strength Across the Thoracic and Lumbar Spine: A Benchmark from Calibrated CT Scans. Bone 2024 (in submission)
+  [Maybe upload to bioRxiv?]
+
+![image](https://github.com/user-attachments/assets/f5cd7f43-8fca-4de5-a546-96120506f327)
+
+Figure 1: Study Overview
 
 ## Directory Structure
 
@@ -33,7 +41,7 @@ Contains CSV metadata describing the full VERSE cohort, including target vertebr
 ### nii_files/
 This folder contains example `.nii.gz` files, including:
 
-- Calibrated and resampled CT images
+- Calibrated and resampled CT images cropped for each (unfractured) vertebra label (e.g. _vertebra_20 = L1, see Verse19 labelling for more information)
 - Cropped and relabeled segmentation masks
 
 The full dataset of cropped NIfTI files must be downloaded from OSF [insert link] and processed accordingly.
@@ -80,6 +88,12 @@ The `results/` folder contains:
 - Figures and tables used in the manuscript
 - Tabulated strength and density values at the target vertebra for each subject
 - Linear FEA-derived stiffness values at all non-fractured vertebrae
+
+## Visual Data Overview
+
+![image](https://github.com/user-attachments/assets/56c0a6b8-8c24-4669-a49c-02710273cbf0)
+
+Figure 2: The dataset includes additional segmenations for vertebral body/process, trabecular/cortical bone and artificial intervertebral disks. 
 
 ## License and Data Source
 
