@@ -2,9 +2,8 @@
 
 This repository provides the code, data structure, and usage instructions for benchmarking linear and nonlinear finite element (FE) models of vertebral strength using calibrated CT scans derived from the VERSE dataset. More details are described in the publication:
 
-- Walle M., Matheson B.E., S.K. Boyd 
-  Comparing Linear and Nonlinear Finite Element Models of Vertebral Strength Across the Thoracic and Lumbar Spine: A Benchmark from Calibrated CT Scans. Bone 2024 (in submission)
-  [Maybe upload to bioRxiv?]
+- Matthias Walle, Bryn E. Matheson, Steven K. Boyd. Comparing Linear and Nonlinear Finite Element Models of Vertebral Strength Across the Thoracolumbar Spine: A Benchmark from Density-Calibrated Computed Tomography. [bioRxiv 2025.04.19.649449](https://www.biorxiv.org/content/10.1101/2025.04.19.649449v1); doi: https://doi.org/10.1101/2025.04.19.649449
+  
 
 ![Figure_1](https://github.com/user-attachments/assets/56439e35-0778-48f1-b371-0d9b40a1788a)
 
@@ -17,9 +16,9 @@ Figure 1: Study Overview
 ```
 .
 ├── data/
-│   ├── calibration_files/        # Calibration text files for converting HU to density (full set needs to be downloaded from OSF)
+│   ├── calibration_files/        # Calibration text files for converting HU to density (full set needs to be downloaded from [Zenodo](https://doi.org/10.5281/zenodo.15313258))
 │   ├── meta_data/                # CSV files with individual info (must be downloaded separately)
-│   └── nii_files/                # CT and mask files in NIfTI format (full set needs to be downloaded from OSF)
+│   └── nii_files/                # CT and mask files in NIfTI format (full set needs to be downloaded from [Zenodo](https://doi.org/10.5281/zenodo.15313258))
 ├── notebooks/                    # Jupyter notebooks for processing and analysis
 ├── results/                      # Output figures, tables, and tabulated values
 ├── CITATION.cff                  # Please cite this project AND related projects below if using this data
@@ -32,7 +31,11 @@ Figure 1: Study Overview
 
 ### calibration_files/
 Contains `.txt` files used to calibrate CT Hounsfield units (HU) to density. These are necessary for generating material properties in finite element models.
-The full dataset must be downloaded OSF [insert link].
+The full dataset must be downloaded from [Zenodo](https://doi.org/10.5281/zenodo.15313258).
+
+The pretrained nnU-net model ([nnU-Net Github](https://github.com/MIC-DKFZ/nnUNet)) weights are available on Zenodo:
+Vertebral Body Segmentation: [10.5281/zenodo.15238175](https://doi.org/10.5281/zenodo.15238175)
+Calibration Tissue Segmentation: [10.5281/zenodo.15238422](https://doi.org/10.5281/zenodo.15238422)
 
 ### meta_data/
 Contains CSV metadata describing the full VERSE cohort, including target vertebra, fracture status, and scan identifiers. You must manually download these CSV files from the original publication appendix:
