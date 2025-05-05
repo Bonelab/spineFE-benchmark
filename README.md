@@ -2,7 +2,7 @@
 
 This repository provides the code, data structure, and usage instructions for benchmarking linear and nonlinear finite element (FE) models of vertebral strength using calibrated CT scans derived from the VERSE dataset. More details are described in the publication:
 
-- Matthias Walle, Bryn E. Matheson, Steven K. Boyd. Comparing Linear and Nonlinear Finite Element Models of Vertebral Strength Across the Thoracolumbar Spine: A Benchmark from Density-Calibrated Computed Tomography. [bioRxiv 2025.04.19.649449](https://www.biorxiv.org/content/10.1101/2025.04.19.649449v1); doi: https://doi.org/10.1101/2025.04.19.649449
+- Matthias Walle, Bryn E. Matheson, Steven K. Boyd. Comparing Linear and Nonlinear Finite Element Models of Vertebral Strength Across the Thoracolumbar Spine: A Benchmark from Density-Calibrated Computed Tomography. bioRxiv 2025.04.19.649449; doi: https://doi.org/10.1101/2025.04.19.649449
   
 
 ![Figure_1](https://github.com/user-attachments/assets/56439e35-0778-48f1-b371-0d9b40a1788a)
